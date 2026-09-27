@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 abstract class LibraryItem {
-    private int id;
-    private String title;
-    private boolean available;
+    int id;
+    String title;
+    boolean available;
 
     LibraryItem(int id, String title) {
         this.id = id;
@@ -35,7 +35,7 @@ abstract class LibraryItem {
 }
 
 class Book extends LibraryItem {
-    private String author;
+    String author;
 
     Book(int id, String title, String author) {
         super(id, title);
@@ -50,7 +50,7 @@ class Book extends LibraryItem {
 }
 
 class Magazine extends LibraryItem {
-    private int issueNumber;
+    int issueNumber;
 
     Magazine(int id, String title, int issueNumber) {
         super(id, title);
@@ -64,7 +64,7 @@ class Magazine extends LibraryItem {
     }
 }
 
-public class LibraryManagement{
+public class LibraryManagement {
 
     static Scanner sc = new Scanner(System.in);
     static LibraryItem[] items = new LibraryItem[100];
